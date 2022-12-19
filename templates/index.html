@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="eng">
+
+<head>
+	<meta charset="utf-8">
+	<title>Arkanoid</title>
+	<style>
+		* {
+			padding: 0;
+			margin: 0;
+		}
+
+		canvas {
+			background-color: rgb(242 246 255);
+			display: block;
+			border: 2px solid red;
+			padding: 10px;
+			border-radius: 50px 20px;
+			margin-block-start: 10px;
+		}
+
+		.start {
+			background-color: #4caf50;
+			display: inline-flex;
+			width: 100px;
+			justify-content: center;
+			height: 30px;
+			align-items: center;
+			color: #fff;
+			border-radius: 5px;
+			font-family: system-ui;
+			font-size: 14px;
+			font-weight: 600;
+			margin-top: 1rem;
+		}
+
+		.start:hover {
+			cursor: pointer;
+		}
+
+		.center {
+			display: flex;
+			justify-content: center;
+			flex-direction: column;
+			align-items: center;
+			/* height: 100vh; */
+		}
+
+		#game-countdown {
+			height: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-family: 'Rubik', sans-serif;
+			font-weight: bold;
+			font-size: 150px;
+			color: red;
+		}
+
+		#canvas {
+			position: relative;
+		}
+
+		#canvas canvas,
+		#game-countdown {
+			position: absolute;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="center">
+		<canvas id="canvas" width="770" height="500"></canvas>
+		<div id="game-countdown"></div>
+		<div id="div" onclick="hide('div'); countDown();">
+			<button class="start">START GAME</button>
+		</div>
+	</div>
+	<script type="text/javascript">
+		function hide(id) {
+			document.getElementById(id).style.display = "none";
+		}
+		function show(id) {
+			document.getElementById(id).style.display = "";
+		}
+	</script>
+	<script src="static/scripts/script.js"></script>
+</body>
+
+</html>
